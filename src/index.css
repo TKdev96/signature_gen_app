@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+.join-form__content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  padding: 3rem 2rem 0;
+  margin: auto 0;
+  
+}
+
+.join-form__content .form-wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+.logo-img {
+  width: 300px;
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+  margin-left: 50vh;
+  margin-right: 50vh;
+}
+
+.join-form__content .title {
+  display: grid;
+  margin-left: 1.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 6.8rem;
+  color: #1f273a;
+  justify-content: center;
+}
+
+h5 {
+  font-size: 1.3rem;
+  padding-bottom: 1.4rem;
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 4.8rem;
+  color: #56d1ee;
+}
+
+.join-form__content form {
+  max-width: 80.6rem;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr) repeat(1, 2fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 2rem;
+}
+
+.dg-input {
+  width: 100%;
+  max-height: 62px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 1.2rem 1.6rem;
+  font-size: 1em;
+  border: 2px solid #e8eef3;
+}
+.dg-input:focus {
+  outline: #56d1ee;
+  border: 2px solid #56d1ee;
+}
+
+.dg-input:hover {
+border: 2px solid #56d1ee;
+}
+
+.dg-input::placeholder {
+  color: #394257;
+}
+.dg-input-check {
+    width: 100%;
+  max-height: 62px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 1.2rem 1.6rem;
+  font-size: 1em;
+  border: 2px solid #56ee5d;
+}
+.dg-input-check:focus {
+  outline: #56ee5d;
+  border: 2px solid #56ee5d;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  display: flex;
+  cursor: pointer;
+  font-weight: 600;
+  color: #768099;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  justify-content: center;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.btn--primary {
+  color: #fff;
+  padding: 1.2rem 3.2rem;
+  background-color: #56d1ee;
+}
+
+.btn-right {
+  float: right;
+}
+
+.btn--primary:hover {
+  opacity: 0.8;
+}
+
+.btn-copy {
+  max-height: 62px;
+}
+
+.copy--div {
+  margin-top: -9.8rem;
+}
+
+.flex {
+  display: flex;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+.label--upload {
+  font-size: 1em;
+  font-weight: 700;
+  color: #394257;
+}
+
+
+.label--upload:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

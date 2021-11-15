@@ -1,0 +1,207 @@
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const Template = (props) => {
+  const notify = () =>
+    toast.success("Kod skopiowano do schowka!", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  const onClear = () => {
+    setTimeout(() => {
+      window.location.reload();
+    }, 3500);
+  };
+
+  const copyClick = (event) => {
+    notify();
+    onClear();
+  };
+
+  return (
+    <div className="copy--div">
+      {props.data.map((data) => (
+        <div className='flex' key={data.id}>
+          <h5 style={{paddingRight: '20px', paddingTop: '20px'}}>Kopiuj kod html podpisu:</h5>
+          <CopyToClipboard
+            text={`<table
+  cellpadding="0"
+  cellspacing="0"
+  style="vertical-align: -webkit-baseline-middle; ; font-family: Arial;"
+>
+  <tbody>
+    <tr>
+      <td style="padding: 0px; vertical-align: middle; border-radius: 10px; padding:20px; box-shadow: 0px 10px 77px 0px rgba(0, 0, 0, 0.25);">
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          style="vertical-align: -webkit-baseline-middle; ; font-family: Arial; "
+        >
+          <tbody>
+            <tr>
+              <td width="0">
+                <div></div>
+              </td>
+              <td style="margin-bottom: 0px; margin-top:0px;">
+                <img style="margin-bottom: 10px;" src="https://deligoo.pl/_next/image?url=%2Fimages%2Fshared%2Flogo-with-text.svg&w=256&q=75"/>
+                <h3
+                  style="margin: 0px; font-size: 18px; color: rgb(154, 154, 154);"
+                >
+                  <span>${data.name} ${data.firstname}</span>
+                </h3>
+                <p
+                  style="margin: 0px; color: rgb(154, 154, 154); font-size: 14px; line-height: 22px;"
+                >
+                  <span>${data.job}</span>
+                </p>
+              <td><img style="max-width:100px; margin-top: 0px; margin-left: 120px;  border-radius:20px;
+" src="${data.file}"/>
+              
+              </td>
+              
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="vertical-align: -webkit-baseline-middle; ; font-family: Arial; width: 100%;"
+                >
+                  <tbody>
+                    <tr>
+                      <td height="20"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          style="vertical-align: -webkit-baseline-middle; ; font-family: Arial; display: inline-block;"
+                        >
+                          
+                            
+                          
+                          <tbody>
+                            <tr style="text-align: center;">
+                              
+                              <td width="5">
+                                <div
+                                  style="margin-left: 0px; margin-right: 5px;"
+                                >
+                                  <a
+                                    href="https://deligoo.pl/"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      style="display: inline-block;"
+                                      height="25"
+                                      src="https://firebasestorage.googleapis.com/v0/b/testreact-504fc.appspot.com/o/InternetIcon.png?alt=media&token=1e4655ca-30b8-4ab1-ab69-69cbf80b5df1"
+                                    />
+                                  </a>
+                                </div>
+                              </td>
+                              <td width="5">
+                                <div
+                                  style="margin-left: 0px; margin-right: 5px;"
+                                >
+                                  <a
+                                    href="https://pl-pl.facebook.com/DeliGoopl/"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      style="display: inline-block;"
+                                      height="25"
+                                      src="https://firebasestorage.googleapis.com/v0/b/testreact-504fc.appspot.com/o/facebookIcon.png?alt=media&token=f06641e3-08d9-48dc-8349-1f151561a08c"
+                                    />
+                                  </a>
+                                </div>
+                              </td>
+                              <td width="5">
+                                <div
+                                  style="margin-left: 0px; margin-right: 5px;"
+                                >
+                                  <a
+                                    href="https://pl.linkedin.com/company/deligoopl"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      style="display: inline-block;"
+                                      height="25"
+                                      src="https://firebasestorage.googleapis.com/v0/b/testreact-504fc.appspot.com/o/linkedinIcon.png?alt=media&token=e84f4203-c969-4f53-b413-4134fd639890"
+                                    />
+                                  </a>
+                                </div>
+                                
+                              </td>
+                              <td width="5">
+                                <div
+                                  style="margin-left: 5px; margin-right: 5px;"
+                                >
+                                  <a
+                                    href="https://www.instagram.com/deligoopl/"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      style="display: inline-block;"
+                                      height="25"
+                                      src="https://firebasestorage.googleapis.com/v0/b/testreact-504fc.appspot.com/o/instagramIcon.png?alt=media&token=5993326e-2a7c-4d28-afb0-50c681625647"
+                                    />
+                                  </a>
+                                </div>
+                              </td>
+                              <td width="5">
+                                <div
+                                  style="padding-left: 20px; margin-top: -10px; text-decoration: none; color: rgb(154, 154, 154); font-size: 12px; white-space: nowrap; text-align: justify;"
+                                >
+                                  <p><b>Tel:</b> +48 ${data.phone}</p>
+                                  <p style="text-decoration: none;"><b>Email:</b> ${data.email}</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                    <tr>
+                      <td
+                        height="1"
+                        style="width: 100%; border-bottom: 1px solid #56d1ee; border-left: none; display: block;"
+                      ></td>
+                    </tr>
+                    <tr>
+                      <td height="30">
+                        <p style="color: rgb(154, 154, 154); font-size: 9px; white-space: normal; text-align: justify; max-width:390px;"><strong>DeliGoo Sp. z o.o.</strong>
+Centrala: Chodkiewicza 19C/4, 85-065 Bydgoszcz, Polska, tel. +48 505 546 723
+Spółka zarejestrowana w Sądzie Rejonowym w Bydgoszczy XIII Wydział Gospodarczy Krajowego
+Rejestru Sądowego, nr KRS 0000683284, NIP 5851478922, Regon 367600052. Kapitał zakładowy
+15 150,00 PLN, w całości opłacony. </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </trb>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>`}
+          >
+            <button className="btn btn--primary btn-copy" onClick={copyClick}>
+              Kopiuj
+            </button>
+          </CopyToClipboard>
+          <ToastContainer />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Template;

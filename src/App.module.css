@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+h1 {
+  display: block;
+  margin-left: 1.5rem;
+  margin-bottom: 3rem;
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 6.8rem;
+  color: #1f273a;
+  font-family: Montserrat, sans-serif;
+}
+
+.errorp {
+  padding-top: 0.3rem;
+  margin-bottom: -1.4rem;
+  text-align: start;
+  color: red;
+  font-weight: 200;
+  font-size: 0.9rem;
+}
